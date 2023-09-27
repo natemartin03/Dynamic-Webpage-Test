@@ -29,8 +29,6 @@ def date():
     <p><a href="/time">Time</a></p>
     <p><a href="/ampm">AM/PM</a></p>
     """
-    def test_date(self):
-        self.assertEqual(now, now.strftime("%Y-%m-%d"))
 
 #Time page
 @app.route("/time")
@@ -44,8 +42,6 @@ def time():
     <p><a href="/date">Date</a></p>
     <p><a href="/ampm">AM/PM</a></p>
     """
-    def test_time(self):
-        self.assertEqual(now, now.strftime("%H:%M:%S"))
 
 #ampm page
 @app.route("/ampm")
@@ -59,8 +55,6 @@ def ampm():
     <p><a href="/date">Date</a></p>
     <p><a href="/time">Time</a></p>
     """
-    def test_ampm(self):
-        self.assertEqual(now, "AM" if now.hour < 12 else "PM")
 
 if __name__ == "__main__":
     app.run()
